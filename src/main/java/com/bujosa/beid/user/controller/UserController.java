@@ -7,10 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bujosa.beid.common.exceptions.NotFoundException;
 import com.bujosa.beid.user.dtos.UserDto;
 import com.bujosa.beid.user.entity.User;
 import com.bujosa.beid.user.service.UserService;
@@ -28,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getById(String id) {
+    public ResponseEntity<User> getById(@PathVariable("id") String id) throws NotFoundException {
         return ResponseEntity.ok(userService.getById(id));
     }
 
@@ -37,8 +39,8 @@ public class UserController {
         return ResponseEntity.ok(userService.create(userDto));
     }
 
-    @PostMapping("/{id}")
-    public ResponseEntity<User> update(@PathVariable("id") String id, @RequestBody UserDto userDto) {
+    @PutMapping("/{id}")
+    public ResponseEntity<User> update(@PathVariable("id") String id, @RequestBody UserDto userDto) throws NotFoundException {
         return ResponseEntity.ok(userService.update(id, userDto));
     }
 
