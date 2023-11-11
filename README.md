@@ -8,6 +8,7 @@ This is a simple project in spring boot using mongodb as database. Also It is a 
 * Use MongoDB as database
 * Use Gradle as build tool
 * Manage Exceptions and Errors
+* Enable Mongo Auditing
 
 ## Reference Documentation
 For further reference, please consider the following sections:
@@ -17,3 +18,4 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.5/gradle-plugin/reference/html/#build-image)
 * [Spring Data MongoDB](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#data.nosql.mongodb)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#web)
+* [Mongo Auditing](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#mongo.auditing)
