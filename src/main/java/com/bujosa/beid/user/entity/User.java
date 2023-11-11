@@ -1,8 +1,11 @@
 package com.bujosa.beid.user.entity;
 
+import java.util.Date;
+
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +17,16 @@ import lombok.Setter;
 @Document(collection = "users")
 public class User {
     @Id
-    @Field("_id")
     private String id;
     private String name;
     private String lastName;
     private String email;
+
+    @CreatedDate
+    private Date createdAt;
+
+    @LastModifiedDate
+    private Date updatedAt;
 
     public User(String name, String lastName, String email) {
         this.name = name;

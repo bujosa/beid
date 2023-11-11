@@ -17,7 +17,7 @@ public class GlobalException {
 
     @ExceptionHandler(AttributeException.class)
     public ResponseEntity<MessageDto> attributeException(AttributeException ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+        return ResponseEntity.badRequest()
                 .body(new MessageDto(HttpStatus.BAD_REQUEST, ex.getMessage()));
     }
 
