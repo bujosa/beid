@@ -21,4 +21,10 @@ public class GlobalException {
                 .body(new MessageDto(HttpStatus.BAD_REQUEST, ex.getMessage()));
     }
 
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<MessageDto> exception(Exception ex) {
+        return ResponseEntity.internalServerError()
+                .body(new MessageDto(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage()));
+    }
+
 }
