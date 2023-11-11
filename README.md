@@ -1,5 +1,7 @@
 # beid
-This is a simple project in spring boot using mongodb as database. Also It is a simple CRUD application with a REST API. 
+This project involves developing a straightforward CRUD application with a RESTful API using the Spring Boot framework. 
+MongoDB is employed as the database, and Gradle serves as the build tool. The objectives include implementing 
+exception and error handling, enabling MongoDB auditing, and incorporating Spring validation.
 
 ## Goals
 
