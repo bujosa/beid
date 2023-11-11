@@ -34,7 +34,8 @@ public class UserService {
     }
 
     public User update(String id, UserDto userDto) throws NotFoundException {
-        User user = userRepository.findById(id).orElseThrow(() -> new NotFoundException("User not found with id: " + id));
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("User not found with id: " + id));
         if (user != null) {
             user.setName(userDto.getName());
             user.setLastName(userDto.getLastName());
@@ -47,6 +48,5 @@ public class UserService {
     public void delete(String id) {
         userRepository.deleteById(id);
     }
-
 
 }
