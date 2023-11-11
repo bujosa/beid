@@ -1,6 +1,5 @@
 package com.bujosa.beid.common.exceptions;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
