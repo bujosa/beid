@@ -3,13 +3,13 @@ This is a simple project in spring boot using mongodb as database. Also It is a 
 
 ## Goals
 
-* Create a simple CRUD application with a REST API
-* Use Spring Boot
-* Use MongoDB as database
-* Use Gradle as build tool
-* Manage Exceptions and Errors
-* Enable Mongo Auditing
-* Use Spring Validation
+- [x] Create a simple CRUD application with a REST API
+- [x] Use Spring Boot
+- [x] Use MongoDB as database
+- [x] Use Gradle as build tool
+- [x] Manage Exceptions and Errors
+- [x] Enable Mongo Auditing
+- [x] Use Spring Validation
 
 ## Reference Documentation
 For further reference, please consider the following sections:

@@ -17,6 +17,8 @@ import com.bujosa.beid.user.dtos.UserDto;
 import com.bujosa.beid.user.entity.User;
 import com.bujosa.beid.user.service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -35,12 +37,12 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<User> create(@RequestBody UserDto userDto) {
+    public ResponseEntity<User> create(@Valid @RequestBody UserDto userDto) {
         return ResponseEntity.ok(userService.create(userDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> update(@PathVariable("id") String id, @RequestBody UserDto userDto)
+    public ResponseEntity<User> update(@PathVariable("id") String id, @Valid @RequestBody UserDto userDto)
             throws NotFoundException {
         return ResponseEntity.ok(userService.update(id, userDto));
     }
